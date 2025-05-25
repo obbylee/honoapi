@@ -1,11 +1,11 @@
-import { Hono } from "hono";
 import { handle } from "hono/vercel";
+import app from "../src";
 
-const app = new Hono().basePath("/api");
+// const app = new Hono().basePath("/api");
 
-app.get("/", (c) => {
-  return c.json({ message: "Congrats! You've deployed Hono to Vercel" });
-});
+// app.get("/", (c) => {
+//   return c.json({ message: "Congrats! You've deployed Hono to Vercel" });
+// });
 
 const handler = handle(app);
 
